@@ -10,7 +10,15 @@ namespace Library
     {
         public string Title;
         public string Author;
-        public string ISBN;
+        public int ISBN;
+
+        // Parameterized constructor
+        public Book(string bookTitle, string bookAuthor, int bookISBN)
+        {
+            Title = bookTitle;
+            Author = bookAuthor;
+            ISBN = bookISBN;
+        }
 
         public void DisplayInfo()
         {
