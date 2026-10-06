@@ -8,17 +8,41 @@ namespace Library
 {
     public class Book
     {
-        public string Title;
-        public string Author;
-        public int ISBN;
 
-        // Parameterized constructor
+        //private fields
+
+        private string _title;
+        private string _author;
+        private int _isbn;
+
+        // public properties
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
+
+        public string Author
+        {
+            get { return _author; }
+            set { _author = value; }
+        }
+
+        public int ISBN
+        {
+            get { return _isbn; }
+            set { _isbn = value; }
+        }
+
+        //constructor
         public Book(string bookTitle, string bookAuthor, int bookISBN)
         {
             Title = bookTitle;
             Author = bookAuthor;
             ISBN = bookISBN;
         }
+
+        //methods
 
         public void DisplayInfo()
         {
@@ -27,6 +51,12 @@ namespace Library
             Console.WriteLine($"Book ISBN: {ISBN}");
             Console.WriteLine();
         }
+
+
+        // Parameterized constructor
+
+
+      
 
     }
     }
